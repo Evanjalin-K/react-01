@@ -1,13 +1,24 @@
+import Todo from "./components/Todo"
 const App = () => {
-  const isLoggedin = false;
-return(
-  <div>
-    {isLoggedin && <h1>Welcome User!</h1>}
-    {!isLoggedin && <h1>Please log in</h1>}
-  </div>
-)
+  const todos = [
+    { id:1, title: "Buy Milk", completed: false},
+    { id:2, title: "Buy Bread", completed: true},
+    { id:3, title: "Buy Butter", completed: false}
+  ]
+  return (
+    <div>
+      <h1>Todo List</h1>
+      <ul>
+        {
+        todos.map(todo =>
+        <Todo
+        key={todo.id} 
+        todo={todo}
+        />
+        )
+        }
+        </ul>
+    </div>
+  )
 }
-
 export default App
-
-//Conditional rendering using terinary(?) operator
