@@ -6,14 +6,20 @@ const App = () => {
     {id:3,name: "lia",age: 29},
     {id:4,name: "Fana",age: 25}
   ]
+  const listFriends = [];
+  for (let i =0; i < friends.length; i++){
+    listFriends.push(
+      <li key={friends[i].id}>{friends[i].name} {friends[i].age}</li>
+    )
+  }
+  console.log(listFriends)
+
   return (
     <div>
       <h1>Friends</h1>
       <ul>
       {
-        friends.map(friend=> //call back function
-          <li key={friend.id}>{friend.name} {friend.age}</li>
-        )
+      listFriends  
       }
       </ul>
     </div>
@@ -22,4 +28,4 @@ const App = () => {
 
 export default App
 
-//Using map function we can get dynamic data
+//Another method by using for loop - map() is the best way to do.
