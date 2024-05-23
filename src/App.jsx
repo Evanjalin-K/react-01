@@ -1,17 +1,22 @@
 const App = () => {
 
-const handleClick = () =>{
-  console.log("Button Clicked")
+const handleChange = (e) =>{
+  console.log(e.target.value);
 }
+
 
   return (
     <div>
       <h1>React App</h1>
-      <button onClick={handleClick}>Click me</button>
+      <input 
+      type="text"
+      onChange={handleChange} />
     </div>
   )
 }
-
 export default App
 
 //event handling
+// Twitter counter
+// To get the count of the character
+// Password length
