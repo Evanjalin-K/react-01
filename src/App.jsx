@@ -1,35 +1,23 @@
-//Functional Componentsgit
-//const App = () => {
-  //return (
-    //<div>
-      //<h1>React App</h1>
-    //</div>
-//)
-//}
-//export default App;
+import { Component } from "react";
 
-//function App () {
-  //return(
-    //<div>
-      //<h1>My React App</h1>
-    //</div>
-  //)
-//}
-//export default App;
+ class Hello extends Component {
+  //In class rendur will work in function return will work
+  render() {
+    return(
+      <h1>Hello world</h1>
+    )
+  }
+ }
 
 
-// Class Component
 
-//import { Component } from "react";
-/// react library
-//class App extends Component{
-  ///ovrride the render method
-  //render(){
-    //return (
-     // <div>
-        //<h1>React App</h1>
-      //</div>
-    //)
-  //}
-//}
-//export default App;
+class App extends Component {
+  render(){
+    return(
+      <div>
+     <Hello/>
+      </div>
+    )
+  }
+}
+export default App;
