@@ -11,7 +11,8 @@ export class App extends Component {
 
 
 handleDecrement = () => {
-  this.setState ({
+  if (this.state.counter > 0)
+   return this.setState ({
     counter: this.state.counter -1
   });
 }
